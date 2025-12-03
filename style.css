@@ -1,0 +1,217 @@
+@import url("https://fonts.googleapis.com/css2?family=Imperial+Script&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    padding: 24px;
+    background-color: #00ced1;
+}
+
+.nav-menu-links {
+    display: flex;
+    gap: 16px;
+    list-style: none;
+}
+
+.nav-menu-links a {
+    font-size: 24px;
+    font-weight: 600;
+    text-decoration: none;
+    color: #0b0101;
+}
+
+.logo {
+    font-size: 36px;
+    font-weight: 600;
+    text-decoration: none;
+    font-family: "Imperial Script", cursive;
+    animation: logoAnimation 2s ease forwards;
+}
+
+@keyframes logoAnimation {
+    0% {
+        opacity: 0;
+        transform: translateY(-25px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.section {
+    margin-bottom: 50px;
+}
+
+.hero {
+    height: 700px;
+    background-image: url("./images/food.jpeg");
+    background-size: cover;
+    background-position: center;
+    gap: 36px;
+    position: relative;
+}
+
+h1 {
+    font-size: 48px;
+    color: #ffffff;
+    text-transform: capitalize;
+    letter-spacing: 3px;
+    font-style: italic;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    animation: textFade 1.6s ease-out forwards;
+}
+
+@keyframes textFadeZoom {
+    0% {
+        opacity: 0;
+        transform: scale(0.85);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.hero-text-box {
+    position: absolute;
+    top: 200px;
+    left: 400px;
+}
+
+.hero-text {
+    font-size: 24px;
+    color: #f8e9ff;
+    letter-spacing: 2px;
+    font-weight: 500;
+    margin-top: 50px;
+    margin-bottom: 60px;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+    animation: textFade 2s ease forwards;
+}
+
+@keyframes textFade {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+button {
+    padding: 12px;
+    border-radius: 10px;
+    border: #00ced1;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease-in;
+}
+
+button:hover {
+    transform: scale(1.05);
+}
+
+h2 {
+    font-size: 28px;
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+table {
+    width: 60%;
+    margin: 0 auto;
+    border-collapse: collapse;
+}
+
+td,
+th {
+    border: 2px solid #00ced1;
+    padding: 8px;
+    text-align: center;
+}
+
+th {
+    background-color: #00ced1;
+}
+
+td {
+    background-color: lightcyan;
+    transition: all 0.5s ease-in-out;
+}
+
+td:hover {
+    background-color: rgb(135, 199, 222);
+    cursor: pointer;
+}
+
+footer {
+    background-color: #00ced1;
+    display: flex;
+    justify-content: space-between;
+    padding: 36px;
+}
+
+.about-section {
+    margin-top: 80px;
+    padding: 40px;
+}
+
+.about-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+}
+
+.about-title {
+    font-size: 28px;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.about-text p {
+    margin-bottom: 18px;
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+.icons i {
+    font-size: 32px;
+    margin-right: 12px;
+    color: #00ced1;
+}
+
+.about-images {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+}
+
+.about-images img {
+    width: 100%;
+    height: 180px;
+    border-radius: 10px;
+    object-fit: cover;
+    transition: all 0.3s ease-out;
+}
+
+.about-images img:hover {
+    transform: scale(1.05);
+    filter: brightness(1.1);
+}
